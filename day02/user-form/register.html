@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>User Registration Form</title>
+    </head>
+    <body>
+      <h1>User Registration</h1>
+      <!-- 폼 시작 -->
+      <form action="#" method="POST">
+        <p>    
+            <h5>이름</h5>
+            <input type="text" name="username" placeholder="사용자의 이름"><br>
+            <h5>이메일</h5>
+            <input type="email" name="email" placeholder="이메일 주소"><br>
+            <h5>비밀번호</h5>
+            <input type="password" name="password" placeholder="비밀번호"><br>
+            <h5>생년월일</h5>
+            <input type="date" name="bithday" placeholder="생년월일">
+        </p>
+        <div>
+            <h5>나이를 선택해주세요</h5>    
+            <input type="number" name="age" min="18" max="100">
+            <h5>만족도를 선택해주세요</h5>
+            1<input type="range" name="=volum" min="1" max="10">10
+        </div>
+        <div>
+            <h5>성별을 선택해주세요</h5>
+            <input type="radio" id="mmm" name="gender" value="Male">
+            <label for="mmm">남성</label>
+            <br>
+            <input type="radio" id="fff" name="gender" value="Female">
+            <label for="fff">여성</label>
+            <br>
+            <input type="radio" id="ooo" name="gender" value="Other">
+            <label for="ooo">다른</label>
+            <br>
+        </div>
+        <div>
+            <h5>관심사를 선택해주세요</h5>
+            <input type="checkbox" id="cd" name="interest" value="Coding">
+            <label for="cd">Cording</label>
+            <br>
+            <input type="checkbox" id="gm" name="interest" value="Gaming">
+            <label for="gm">Gaming</label>
+            <br>
+            <input type="checkbox" id="rd" name="interest" value="Reading">
+            <label for="rd">Reading</label>
+        </div>
+        <div>
+            <h5>국가를 선택해주세요</h5>
+            <select name="country" multiple>
+                <option value="South Korea">South Korea</option>
+                <option value="USA">USA</option>
+                <option value="Japan">Japan</option>
+                <option value="China">China</option>
+                <option value="UK">UK</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <button type="submit">제출</button>
+            <button type="reset">초기화</button>
+        </div>
+    </form>
+    </body>
+</html>
