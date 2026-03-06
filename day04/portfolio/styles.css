@@ -1,0 +1,62 @@
+/* header {
+    background-color: #DBD9CD;
+}
+nav {
+    background-color: #DBA099;
+} */
+.flex-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.menu {
+    background-color: rgb(255, 253, 231);
+    color: rgb(108, 108, 108);
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+.my-portfolio {
+    text-align: center;
+    color: rgb(108, 108, 108);
+}
+#about-me{
+    text-align: center;
+    color: rgb(108, 108, 108);
+}
+.introduce {
+    text-align: center;
+        color: rgb(108, 108, 108);
+}
+/* #about {
+    background-color:antiquewhite;
+} */
+#my-project-s {
+    text-align: center;
+    color: rgb(108, 108, 108);
+}
+#project-s {
+    /* background-color: #D6DB93; */
+    text-align: center;
+    color: rgb(108, 108, 108);
+}
+/* aside {
+    background-color:aquamarine;
+} */
+#skills {
+    text-align: center;
+    color: rgb(108, 108, 108);
+}
+.skills-00 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+footer {
+    /* background-color:beige; */
+    text-align: center;
+    color: rgb(108, 108, 108);
+}
