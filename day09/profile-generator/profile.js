@@ -38,9 +38,9 @@ let information = {
     student: true
 }
 
-console.log("sentence1", string1 + information.name + string4);
-console.log("sentence2", string2 + information.month + string4);
-console.log("sentence3", string3 + information.student + string4);
+console.log("sentence1", string1 + " " + information.name + string4);
+console.log("sentence2", string2 + " " + information.month + "월" + string4);
+console.log("sentence3", string3 + " " + information.student + string4);
 
 console.log("typeof name", typeof name);
 console.log("typeof month", typeof month);
