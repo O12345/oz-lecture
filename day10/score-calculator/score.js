@@ -1,56 +1,50 @@
 let input = prompt("점수를 입력하세요.");
-// console.log(input);
-let number = Number(input)
+// let score = "10" + 5; // "10" + "5" => "105"
+const BONUS_SCORE = 5;
+let score = Number(input);
 
-var finalScore = number + 5;
-console.log("Final Score:", finalScore)
+let lastScore = score + BONUS_SCORE;
+// score += BONUS_SCORE;    // 더하고 할당했구나!
+// let lastScore = score;
+console.log(lastScore);
+console.log(typeof lastScore);
 
-// const finalScore = maxScore;
-if (finalScore >= 100) {
-    grade = "S";
-    console.log("Grade:", "S");
-} else if (finalScore >= 90) {
-    grade = "A";
-    console.log("Grade:", "A");
-} else if (finalScore >= 80) {
-    grade = "B";
-    console.log("Grade:", "B");
-} else if (finalScore >= 70) {
-    grade = "C";
-    console.log("Grade:", "C");
-} else if (finalScore >= 60) {
-    grade = "D";
-    console.log("Grade:", "D");
+// 최종점수 콘솔찍기
+console.log("Final Score: " + lastScore);
+
+// 등급 콘솔찍기
+if (lastScore >= 100) {
+    console.log("Grade: S");
+} else if (lastScore >= 90) {
+    console.log("Grade: A");
+} else if (lastScore >= 80) {
+    console.log("Grade: B");
+} else if (lastScore >= 70) {
+    console.log("Grade: C");
+} else if (lastScore >= 60) {
+    console.log("Grade: D");
 } else {
-    grade = "F"
-    console.log("Grade:", "F");
+    console.log("Grade: F");
 }
 
-let passFail = (finalScore >= 60) ? "Pass" : "Fail";
-console.log("Status:", passFail)
-// if (finalScore >= 60) {
-//     console.log("Pass");
-// } else {
-//     console.log("Fail");
-// }
+// 상태 콘솔찍기
+if(lastScore >= 60) {
+    console.log("Status: Pass");
+} else {
+    console.log("Status: Fail");
+}
 
-switch (grade) {
-    case "S":
-        console.log("Message:", "Super!!");
-        break;
-    case "A":
-        console.log("Message:", "Excellent work!");
-        break;
-    case "B":
-        console.log("Message:", "Good job!");
-        break;
-    case "C":
-        console.log("Message:", "Satisfactory performance.");
-        break;
-    case "D":
-        console.log("Message:", "Needs improvement.");
-        break;
-    default:
-        console.log("Message:", "Please try harder!");
-        break;
+// 메세지 콘솔찍기
+if (lastScore >= 100) {
+    console.log("Message: Super!!");
+} else if (lastScore >= 90) {
+    console.log("Message: Excellent work!");
+} else if (lastScore >= 80) {
+    console.log("Message: Good job!");
+} else if (lastScore >= 70) {
+    console.log("Message: Satisfactory performance.");
+} else if (lastScore >= 60) {
+    console.log("Message: Needs improvement.");
+} else {
+    console.log("Message: Please try harder!");
 }
