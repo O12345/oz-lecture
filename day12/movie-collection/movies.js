@@ -1,47 +1,52 @@
-const defaultGenre = "Unknown";
-
-let first = {
-    title: "The Matrix",
-    director: "Wachowskis",
-    year: 1999,
-    genre: "Sci-Fi",
-    }
-let second = {
-    title: "Inception",
-    director: "Nolan",
+const prepareMovies = () => {
+  const movies = [];
+  let movie1 = {
+    title: "쇼생크 탈출",
+    director: "프랭크 다라본트",
+    year: 1994,
+    genre: "드라마",
+  };
+  let movie2 = {
+    title: "인셉션",
+    // director: "크리스토퍼 놀란",
     year: 2010,
-    genre: "Sci-Fi",
-    }
-let third = {
-    title: "Parasite",
-    director: "Bong",
+    genre: "액션, SF",
+  };
+  let movie3 = {
+    title: "기생충",
+    // director: "봉준호",
     year: 2019,
-    genre: "Drama",
-    }
+    genre: "드라마, 스릴러",
+  };
 
-let movies = [first, second, third];
-console.log(movies);
-// movies.push(first);
-// movies.push(second);
-// movies.push(third);
-// console.log(movies);
+  movies.push(movie3);
+  movies.push(movie1);
+  movies.push(movie2);
+  movies.push({
+    title: "어벤져스: 엔드게임",
+    director: "안소니 루소, 조 루소",
+    year: 2019,
+    genre: "액션, 어드벤처, SF",
+  });
+  return movies;
+};
 
+const printMovie = (title, director = "Unknown", year, genre) => {
+  console.log(
+    `Title: ${title}, Director: ${director}, Year: ${year}, Genre: ${genre}`,
+  );
+};
 
+const printMovies = (movies) => {
+  console.log("Movie Collection:");
+  for (let i = 0; i < movies.length; i++) {
+    const movie = movies[i];
+    printMovie(movie.title, movie.director, movie.year, movie.genre);
+  }
+  //   movies.forEach(printMovie);
+  //   movies.map(printMovie);
+  console.log(`Total Movies: ${movies.length}`);
+};
 
-function printMovies(movies) {
-    for (let i =0; i < movies.length; i++) {
-        let movie = movies[i];
-        if (!movies.title) {
-            movies.title = "Unknown";
-        }
-        if (!movies.director) {
-            movies.director = "Unknown";
-        }
-    }
-    console.log(`1. Title: ${first.title}, Director: ${first.director}, Year: ${first.year}, Genre: ${first.genre}`)
-    console.log(`2. Title: ${second.title}, Director: ${second.director}, Year: ${second.year}, Genre: ${second.genre}`)
-    console.log(`3. Title: ${third.title}, Director: ${third.director}, Year: ${third.year}, Genre: ${third.genre}`)
-    console.log(movies.length)
-}
-
-printMovies(movies)
+const movies = prepareMovies();
+printMovies(movies);
