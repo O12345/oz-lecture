@@ -1,0 +1,28 @@
+h1 {
+    color: rgb(70, 70, 70);
+}
+.container {
+    max-width: 600px;
+    margin-top: 50px;
+    text-align: center;
+    }
+#timerDisplay {
+    font-size: 24px;
+    margin-top: 20px;
+    }
+.error {
+    color: red;
+    }
+#timerInput::placeholder {
+    color: #d1d1d1; /* 연한 색상 */
+    }
+#startTimer {
+    background-color: #bcd4f1;
+    border: none;
+    padding: 9px 14px;
+    border-radius: 50px;
+    }
+#startTimer:hover {
+  background-color: #a9b8cd;
+  cursor: pointer;
+}

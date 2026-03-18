@@ -22,6 +22,9 @@ const showTimerSec = (sec) => {
 // 4. 완료 메시지
 const showTimerComplete = () => {
   timerDisplay.innerText = "타이머 종료!";
+  setTimeout(() => {
+      timerDisplay.innerText = "";
+    }, 5000);
 };
 
 // 5. 에러 메시지 (빨간색)
