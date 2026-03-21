@@ -44,7 +44,7 @@ function removeBook(button) {
   const title = text.split(" - ")[0]; // 제목: "책1"
 
   // TODO : books 배열에서 도서 제거 (findIndex, splice 사용)
-    const index = books.findIndex( item => li.book-item )
+    const index = books.findIndex(book => book.title === title)
     if (index !== -1) {
     books.splice(index, 1); // 2. 찾은 인덱스에서 1개 제거 [4]
     }
@@ -57,13 +57,16 @@ function removeBook(button) {
 // 도서 데이터 처리
 function processBooks() {
   // TODO : map 제목에 "Book: " 접두사 추가
-  const prefixedBooks = books.map((book) => {`Book: ${title}`});
+  const prefixedBooks = books.map((book) => ({
+        title: "Book: " + book.title,
+        price: book.price
+  }));
 
   // TODO : filter 10000원 이상 도서
   const highPriceBooks = books.filter((book) => { book.price >= 10000});
 
   // TODO : reduce 총 가격 계산
-  const totalPrice = books.reduce(() => {}, 0);
+  const totalPrice = books.reduce((sum, book) => {sum + book.price}, 0);
 
   // 결과 표시
   const resultsDiv = document.getElementById("results");
