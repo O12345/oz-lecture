@@ -66,7 +66,7 @@ function processBooks() {
   const highPriceBooks = books.filter((book) => { book.price >= 10000});
 
   // TODO : reduce 총 가격 계산
-  const totalPrice = books.reduce((sum, book) => {sum + book.price}, 0);
+  const totalPrice = books.reduce((acc, book) => {acc + book.price}, 0);
 
   // 결과 표시
   const resultsDiv = document.getElementById("results");
