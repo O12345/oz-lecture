@@ -3,7 +3,7 @@ async function fetchUsers() {
     const response = await fetch(`https://jsonplaceholder.typicode.com/users`);
     if (!response.ok) throw new Error("fetch ERROR");
     console.log(response.ok);
-    const users = await response.json();
+    const users = await response.json();  //JSON.parse()
     console.log(users); // obj
     document.querySelector("#output").innerHTML = `<h2>사용자 목록</h2>`;
 
